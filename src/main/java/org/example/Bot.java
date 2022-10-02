@@ -134,7 +134,8 @@ public class Bot extends TelegramLongPollingBot {
             Message message = update.getMessage();
             String slova = message.getText();
             String masha = "Маша";
-            if (slova.contains(masha)) {
+            String mamaMashi = "Наталья Владимировна";
+            if (slova.contains(masha)||slova.contains(mamaMashi)) {
                 execute(SendMessage
                         .builder()
                         .chatId(message.getChatId().toString())
